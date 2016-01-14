@@ -41,7 +41,7 @@ package salty {
       val scount = generateScount
       val acount = generateAcount
       val bcount = generateBcount
-      for (iter <- 1 to 1000) {
+      for (iter <- 1 to 100) {
         /**
          * Calculate a
          */
@@ -107,8 +107,8 @@ package salty {
         /**
          * Update T
          */
-        val smoothCoeT = 0.001
-        val smoothCoeD = 0.001
+        val smoothCoeT = 0.002
+        val smoothCoeD = 0.005
         val chWordNum = chWordSet.size
         for (enWord <- enWordSet) {
           val y = scount(enWord) + chWordNum * smoothCoeT
